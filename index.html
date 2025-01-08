@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HimTrekX - Explore Himachal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Hero Section Style with Map as Background */
+        .hero {
+            position: relative;
+            height: 500px; /* Adjust the height of the hero section */
+            overflow: hidden;
+        }
+
+        .map-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .hero button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .hero button:hover {
+            background-color: #ff4f43;
+        }
+
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        .logo h1 {
+            margin-left: 10px;
+            font-size: 1.8em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="name.png" alt="HimTrekX Logo">
+            <h1>HimTrekX</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#religious-sites">Religious Sites</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="map-container">
+                <!-- Embed Google Map (adjust the URL as needed) -->
+                <img src="car.png" width: 400px,
+                height: 300px>
+            </div>
+            <div class="hero-text">
+                <h2>Discover the Untrodden Path</h2>
+                <p>Explore hidden trails and cultural wonders in Himachal Pradesh.</p>
+                <button onclick="scrollToSection('features')">Get Started</button>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>HimTrekX is your gateway to Himachal Pradesh's unexplored trails and vibrant culture. We connect adventurers with eco-friendly homestays, guided tours, and local experiences.</p>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Eco-Friendly Stays</h3>
+                    <p>Book sustainable accommodations surrounded by nature.</p>
+                </div>
+                <div class="card">
+                    <h3>Hidden Trails</h3>
+                    <p>Explore lesser-known trekking routes curated by locals.</p>
+                </div>
+                <div class="card">
+                    <h3>Virtual Experiences</h3>
+                    <p>Immerse yourself in Himachali culture from anywhere in the world.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours" class="tours">
+            <h2>Popular Treks (Explored)</h2>
+            <div class="tour-list">
+                <div class="tour">
+                    <h3>Triund Trek</h3>
+                    <p>Experience the stunning views of the Dhauladhar range.</p>
+                    <p><strong>Location:</strong> Dharamshala, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Dharamshala,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="triund-trek.jpg" alt="Triund Trek">
+                </div>
+                <div class="tour">
+                    <h3>Spiti Valley Adventure</h3>
+                    <p>Discover the breathtaking landscapes of Spiti.</p>
+                    <p><strong>Location:</strong> Spiti Valley, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Spiti+Valley,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="spiti-valley.jpg" alt="Spiti Valley">
+                </div>
+                <div class="tour">
+                    <h3>Beas Kund Trek</h3>
+                    <p>Explore the majestic Beas Kund and its surrounding peaks.</p>
+                    <p><strong>Location:</strong> Manali, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Manali,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="beas-kund.jpg" alt="Beas Kund Trek">
+                </div>
+            </div>
+
+            <h2>Hidden Trails (Unexplored)</h2>
+            <div class="tour-list">
+                <div class="tour">
+                    <h3>Langza to Komic Trek</h3>
+                    <p>Explore the remote landscapes of Spiti, with stunning views.</p>
+                    <p><strong>Location:</strong> Langza to Komic, Spiti Valley, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Langza+to+Komic,+Spiti+Valley,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="langza-komic.jpg" alt="Langza to Komic Trek">
+                </div>
+                <div class="tour">
+                    <h3>Khirganga to Pin Valley Trek</h3>
+                    <p>Embark on a challenging trek through lush valleys and rugged mountains.</p>
+                    <p><strong>Location:</strong> Parvati Valley to Pin Valley, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Parvati+Valley+to+Pin+Valley,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="khirganga-pins.jpg" alt="Khirganga to Pin Valley Trek">
+                </div>
+                <div class="tour">
+                    <h3>Wari La Pass Trek</h3>
+                    <p>Venture through one of the most remote and scenic routes in Lahaul.</p>
+                    <p><strong>Location:</strong> Lahaul Valley, Himachal Pradesh</p>
+                    <button onclick="window.open('https://www.google.com/maps?q=Lahaul+Valley,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    <img src="wari-la-pass.jpg" alt="Wari La Pass Trek">
+                </div>
+            </div>
+        </section>
+
+        <section id="religious-sites" class="religious-sites">
+            <h2>Religious Sites in Himachal Pradesh</h2>
+            <div class="religious-sites-list">
+                <h3>Kullu Valley</h3>
+                <ul>
+                    <li><strong>Bijli Mahadev Temple</strong> - Kullu, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Bijli+Mahadev+Temple,+Kullu,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                    <li><strong>Raghunath Temple</strong> - Kullu, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Raghunath+Temple,+Kullu,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                    <li><strong>Jagannath Temple</strong> - Kullu, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Jagannath+Temple,+Kullu,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                    <li><strong>Bajeshwar Mahadev Temple</strong> - Kullu, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Bajeshwar+Mahadev+Temple,+Kullu,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                </ul>
+
+                <h3>Dharamshala/Kangra Valley</h3>
+                <ul>
+                    <li><strong>Kangra Devi Temple</strong> - Kangra, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Kangra+Devi+Temple,+Kangra,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                    <li><strong>Dalai Lama's Temple</strong> - Mcleodganj, Dharamshala, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Dalai+Lama+Temple,+Mcleodganj,+Dharamshala,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                    <li><strong>Masrur Rock Cut Temple</strong> - Kangra, Himachal Pradesh
+                        <button onclick="window.open('https://www.google.com/maps?q=Masrur+Rock+Cut+Temple,+Kangra,+Himachal+Pradesh')" class="location-button">View Location</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

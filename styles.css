@@ -1,0 +1,207 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #00b4d8, #005f73); /* Beautiful gradient for the background */
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00b4d8; /* Highlight on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-image.jpg') no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #00b4d8;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero button:hover {
+    background-color: #005f73;
+    transform: scale(1.05); /* Subtle scale effect on hover */
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.feature-cards, .tour-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Cards (Feature/Tour) Styling */
+.card, .tour {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Light shadow */
+}
+
+.card img, .tour img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.card h3, .tour h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card p, .tour p {
+    font-size: 1rem;
+}
+
+.card:hover, .tour:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Button Styling for Location */
+.location-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #00b4d8;
+    border: none;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.location-button:hover {
+    background-color: #005f73;
+    transform: scale(1.05);
+}
+
+.location-button:focus {
+    outline: none;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px 20px;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial-cards .card {
+    background-color: #fff;
+    color: #333;
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial-cards .card h4 {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
